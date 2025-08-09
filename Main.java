@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        Player player = new Player();
+        Player player = new Player(0, 0);
         Island island = new Island();
         island.generateMap();
 
