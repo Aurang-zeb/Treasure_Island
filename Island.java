@@ -35,7 +35,7 @@ public class Island {
     public void displayMap(Player player) {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                if (i == player.PositionX && j == player.PositionY) {
+                if (i == player.getPositionX() && j == player.getPositionY()) {
                     System.out.print("P ");
                 } else {
                     System.out.print(map[i][j] + " ");
@@ -46,10 +46,10 @@ public class Island {
     }
 
     public boolean isTreasure(Player player) {
-        return map[player.PositionX][player.PositionY].equals("T");
+        return map[player.getPositionX()][player.getPositionY()].equals("T");
     }
 
     public boolean isTrap(Player player) {
-        return map[player.PositionX][player.PositionY].equals("x");
+        return map[player.getPositionX()][player.getPositionY()].equals("x");
     }
 }
